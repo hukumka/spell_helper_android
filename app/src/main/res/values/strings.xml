@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Pfbase</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Show spell 1</string>
+    <string name="levelPlaceholder">0</string>
+    <string name="spellNamePlaceholder">Create water</string>
+    <string name="casting_time">Casting time</string>
+    <string name="casting_time_placeholder">1 standard action</string>
+    <string name="components">Components</string>
+    <string name="componentsPlaceholder">V, S</string>
+    <string name="range">Range</string>
+    <string name="close">close (25ft. + 5ft./2 levels)</string>
+    <string name="effect">Effect</string>
+    <string name="ns_of_water_level">up to 2 gallons of water/level</string>
+    <string name="saving_throw">Saving throw</string>
+    <string name="resistance">Spell resistance</string>
+    <string name="resistancePlaceholder">no</string>
+    <string name="savePlaceholder">none</string>
+    <string name="textview">
+            \tThis spell generates wholesome, drinkable water, just like clean rain water.
+            Water can be created in an area as small as will actually contain the liquid,
+            or in area three times as large - possibly creating downpour or filling many small
+            receptacles. This water disappears after 1 day if not consumed.
+            \n
+            \tNote: Conjuration spells can\'t create substances or objects within a creature. Water weights about 8 pounds per gallon. One cubic foot of water contains roughly 8 gallons and weight about 60 pounds.
+    </string>
+    <string name="duration">Duration</string>
+    <string name="durationPlaceholder">Instantaneous</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="addspell">AddSpell</string>
+    <string name="level">Level</string>
+    <string name="spells_menu_button">Spells</string>
+</resources>

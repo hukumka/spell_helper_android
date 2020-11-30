@@ -1,0 +1,141 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "852c5a18717ab96ad1a42b3de6aa1024",
+    "entities": [
+      {
+        "tableName": "Spell",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`spell_id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `level` INTEGER NOT NULL, `casting_time` TEXT, `components` TEXT, `duration` TEXT, `range` TEXT, `effect` TEXT, `save` TEXT, `resistance` INTEGER, `description` TEXT NOT NULL, `school` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "spell_id",
+            "columnName": "spell_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "casting_time",
+            "columnName": "casting_time",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "components",
+            "columnName": "components",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "range",
+            "columnName": "range",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "effect",
+            "columnName": "effect",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "save",
+            "columnName": "save",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "resistance",
+            "columnName": "resistance",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "school",
+            "columnName": "school",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "spell_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Spell_level",
+            "unique": false,
+            "columnNames": [
+              "level"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Spell_level` ON `${TABLE_NAME}` (`level`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "SpellSlot",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`slot_id` INTEGER PRIMARY KEY AUTOINCREMENT, `prepared_spell_id` INTEGER, `slot_level` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "slot_id",
+            "columnName": "slot_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "prepared_spell_id",
+            "columnName": "prepared_spell_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "slot_level",
+            "columnName": "slot_level",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "slot_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '852c5a18717ab96ad1a42b3de6aa1024')"
+    ]
+  }
+}
